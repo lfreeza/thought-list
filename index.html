@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ThoughtList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Chivo:900i|Exo:900|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+   
+</head>
+<body style="background-image: url('thought-catalog-728536-unsplash.jpg');">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html" ><i class="fas fa-comment-alt"></i> ThoughtList</a>
+        
+    </nav>
+   <main >
+        <div class="jumbotron w-50 bg-light mt-3 mx-auto p-5">
+            <h1 class="h1 text-center">ThoughtList Awesome!</h1>
+            <form id="formthought" class="form-inline p-3" > 
+                <input id="inputThought" type="text" class="form-control" style="width: 90%" placeholder="Put your thought here!">
+                <button id="addButton" type="button" style="width: 10%" class="btn btn-outline-secondary">Add</button>
+            </form>
+            <h5>Your thought so far:</h3>
+            <ul id="thoughts">
+                <li><a href="#choose" data-toggle="modal" data-target="#choose" >I'm cool</a></li>
+                <li><a href="#choose" data-toggle="modal" data-target="#choose" >I'm awesome</a></li>
+                <li><a href="#choose" data-toggle="modal" data-target="#choose" >Pure awesomeness</a></li>
+            </ul>
+        </div>
+  
+  <!-- choose -->
+  <div class="modal fade" id="choose" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Choose your action</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Choose action from options below
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="editbutton" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#edit">Edit</button>
+          <button type="button" id="removebutton" class="btn btn-danger">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- edit -->
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Edit thought</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="formthought" class="form-inline"> 
+                    <input id="editThought" type="text" class="form-control" placeholder="">
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" id="savebutton" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+        
+
+   </main>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>
